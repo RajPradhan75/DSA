@@ -23,14 +23,14 @@ public class SubArrayWithGivenSum {
 			}
 
 		}
-		
-		
-		int max= 0;
-		for(i=0;i<n;i++) {
+
+		int max = 0;
+		for (i = 0; i < n; i++) {
 			max += arr[0];
 		}
-		
-		if(max < sum) return max;
+
+		if (max < sum)
+			return max;
 
 		System.out.println("No subarray found");
 		return 0;

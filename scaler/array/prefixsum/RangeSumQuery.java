@@ -1,11 +1,22 @@
 package datastructures.src.com.scaler.array.prefixsum;
 
+import java.util.Arrays;
+
 public class RangeSumQuery {
 
 //A = [1, 2, 3, 4, 5]
 // B = [[1, 4], [2, 3]]
 
-	public long[] rangeSum(int[] A, int[][] B) {
+	public static void main(String[] args) {
+		int[] A = { 1, 2, 3, 4, 5 };
+		int[][] B = { { 1, 4 }, { 2, 3 } };
+		
+	
+		System.out.println(Arrays.toString(rangeSum(A, B)));
+
+	}
+
+	public static long[] rangeSum(int[] A, int[][] B) {
 
 		long[] prefix_sum = new long[A.length];
 
