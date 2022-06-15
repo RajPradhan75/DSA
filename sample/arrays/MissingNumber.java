@@ -6,21 +6,21 @@ public class MissingNumber {
 		int[] arr = {0,1,2,3,4,6};
 		int n = arr.length;
 
-		int missing_no = findMissingNumXOR(arr, n);
+		int missing_no = findMissingNumFormula(arr, n);
 
 		System.out.println("Missing number is " + missing_no);
 
 	}
 
-//	
-//	static int findMissingNumFormula(int[] arr, int n) {
-//		// all numbers from 0 to n - sum of n-1 elements in array
-//			int sum = n;
-//		 for (int i = 0; i < n; i++)   //0,1,2,3,4,6
-//		        sum += i - arr[i];
-//		 return sum;
-//		
-//	}
+	
+	static int findMissingNumFormula(int[] arr, int n) {
+		// all numbers from 0 to n - sum of n-1 elements in array
+			int sum = n;
+		 for (int i = 0; i < n; i++)   //0,1,2,3,4,6
+		        sum += i - arr[i];
+		 return sum;
+		
+	}
 
 	// Using XOR  (Best approach as it will not give overflow error)
 	static int findMissingNumXOR(int[] arr, int n) {
