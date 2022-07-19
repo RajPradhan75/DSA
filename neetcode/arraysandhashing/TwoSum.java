@@ -19,7 +19,7 @@ public class TwoSum {
 		Map<Integer, Integer> map = new HashMap<>();
 		for (int i = 0; i < arr.length; i++) {
 	        if (map.containsKey(k - arr[i])) {
-	            return new int[] { i, map.get(k - arr[i]) };
+	            return new int[] {  map.get(k - arr[i]) ,i};
 	        }
 
 	        map.put(arr[i], i);

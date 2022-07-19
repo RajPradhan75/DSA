@@ -35,11 +35,8 @@ public class EquillibriumIndex {
 
 		}
 
-
 		return -1;
-
-	
-
+		
 		// best approach
 
 //		int left = 0, sum = 0;
@@ -53,5 +50,8 @@ public class EquillibriumIndex {
 //			left += arr[i];
 //		}
 //		return -1;
+		
+		
+		
 	}
 }

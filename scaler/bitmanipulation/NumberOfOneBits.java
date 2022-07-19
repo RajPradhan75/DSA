@@ -1,4 +1,4 @@
-package datastructures.src.com.scaler.array.bitmanipulation;
+package datastructures.src.com.scaler.bitmanipulation;
 
 public class NumberOfOneBits {
 

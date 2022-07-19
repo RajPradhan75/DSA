@@ -38,7 +38,7 @@ public class CountingSubArrays {
 
 		while (start < n && end < n) {
 
-			// If sum is less than k,
+			// If sum is less than B,
 			// move end by one position.
 			// Update count and sum
 			// accordingly.
@@ -56,7 +56,7 @@ public class CountingSubArrays {
 			}
 
 			// If sum is greater than or
-			// equal to k, subtract
+			// equal to B, subtract
 			// arr[start] from sum and
 			// decrease sliding window by
 			// moving start by one position

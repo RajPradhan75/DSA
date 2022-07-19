@@ -3,7 +3,7 @@ package datastructures.src.com.scaler.array.subarray;
 public class SumOfSubArray {
 
 	public static void main(String[] args) {
-		int[] A = { 2, 9, 5 };
+		int[] A = { 2, 1, 3}; //  [2] + [1] + [3] + [2 + 1]  + [1 + 3] + [2 + 1 + 3] = 19
 		System.out.println(solution(A));
 
 	}

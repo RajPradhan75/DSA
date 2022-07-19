@@ -1,0 +1,33 @@
+package datastructures.src.com.scaler.array.twodarray;
+
+import java.util.Arrays;
+
+public class RowSum {
+
+	public static void main(String[] args) {
+		int[][] A = { { 1, 2, 3, 4 }, 
+				      { 5, 6, 7, 8 }, 
+				      { 9, 2, 3, 4 } };
+		System.out.println( Arrays.toString(solve(A)));
+
+	}
+
+	public static int[] solve(int[][] A) {
+
+		int row = A.length;
+		int col = A[0].length;
+
+		int[] result = new int[row];
+	
+		for (int i = 0; i < row; i++) {
+			int sum = 0;
+			for (int j = 0; j < col; j++) {
+				sum += A[i][j];
+			}
+			result[i] = sum;
+		}
+
+		return result;
+	}
+
+}

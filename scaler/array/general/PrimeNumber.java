@@ -3,7 +3,7 @@ package datastructures.src.com.scaler.array.general;
 public class PrimeNumber {
 
 	public static void main(String[] args) {
-		int n = 3;
+		int n = 15;
 
 		checkPrime(n);
 	}
@@ -26,26 +26,22 @@ public class PrimeNumber {
 //			return false;
 //		}
 
-		 
+		int count = 0;
 
-		        int count = 0;
+		for (int i = 1; i * i <= n; i++) {
+			if (n % i == 0) {
+				if (i == n / i)
+					count++; 
+				else
+					count += 2;
+			}
+		}
 
-		        for(int i=1; i*i<=n; i++){
-		            if(n%i == 0){
-		                if(i == n/i)
-		                count++;
-		                else 
-		                count+=2;
-		            }
-		        }
-
-		        if(count == 2){
-		            System.out.println("YES");
-		        }else{
-		            System.out.println("NO");
-		        }
-		    
-		
+		if (count == 2) {
+			System.out.println("YES");
+		} else {
+			System.out.println("NO");
+		}
 
 	}
 
