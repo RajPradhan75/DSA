@@ -28,7 +28,7 @@ public class AntiDiagonal {
 //		A.get(2).add(1, 8);
 //		A.get(2).add(2, 9);
 
-		System.out.println( Arrays.deepToString(diagonal(A)));
+		System.out.println(Arrays.deepToString(diagonal(A)));
 
 	}
 
@@ -117,20 +117,21 @@ public class AntiDiagonal {
 		int[][] res = new int[2 * A.length - 1][A.length];
 		int k = 0;
 		for (int j = 0; j < A.length; j++) {
-			
+
 			int row = 0;
-			
-			int col = j; int  m = 0;
+
+			int col = j;
+			int m = 0;
 			while (row < A.length && col >= 0) {
 
 				res[k][m++] = A[row][col];
 				row++;
 				col--;
 			}
-	
+
 			k++;
 		}
-		
+
 		int j = A.length - 1;
 		for (int i = 1; i < A.length; i++) {
 
@@ -140,7 +141,7 @@ public class AntiDiagonal {
 				t++;
 				col--;
 			}
-	
+
 			k++;
 		}
 		return res;

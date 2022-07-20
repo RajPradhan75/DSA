@@ -14,18 +14,6 @@ public class RotateMatrix {
 
 		int row = A.length;
 		int col = A[0].length;
-
-		int[][] ans = new int[col][row];
-	
-		
-		
-//		Transpose
-//		for (int j = 0; j < col; j++) {
-//			for (int i = 0; i < row; i++) {
-//				ans[j][i] = A[i][j];
-//
-//			}
-//		}
 		
 		
 		for(int j = 0; j<col ; j++) {
@@ -37,8 +25,6 @@ public class RotateMatrix {
 		}
 		
 		
-		
-
 		for(int i = 0; i<col ; i++) {
 			int low = 0, high = row - 1;
 			
