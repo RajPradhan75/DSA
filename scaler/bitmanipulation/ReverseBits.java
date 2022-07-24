@@ -1,31 +1,26 @@
 package datastructures.src.com.scaler.bitmanipulation;
 
-
-
 public class ReverseBits {
-	
+
 	public static void main(String[] args) {
 		long n = 13;
 		System.out.println(solve(n));
-	
-		
+
 	}
-	
+
 	public static long solve(long n) {
-		
 
-		
-		   long result = 0;
-	        
-	        for(int i=0; i<32; i++){
-	            result <<= 1;
-	            result += n&1;
-	            n >>= 1;
-	        }
-	       return result; 
+		long result = 0;
+
+		for (int i = 0; i < 32; i++) {
+			result <<= 1;
+			result += n & 1;
+			n >>= 1;
+		}
+		return result;
 
 	}
- 
+
 }
 
 //

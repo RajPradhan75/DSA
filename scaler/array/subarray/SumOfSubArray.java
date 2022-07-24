@@ -27,8 +27,9 @@ public class SumOfSubArray {
 		
 		int sum = 0; 
 		
+		int n = A.length;		
 		for(int i = 0; i<A.length;i++) {
-			sum += (A[i] * (i+1) * (A.length-i));
+			sum += (A[i] * (i+1) * (n-i));
 		}
 		
 		return sum;

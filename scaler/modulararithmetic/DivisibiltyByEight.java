@@ -1,4 +1,4 @@
-package datastructures.src.com.scaler.array.modulararithmetic;
+package datastructures.src.com.scaler.modulararithmetic;
 
 public class DivisibiltyByEight {
 

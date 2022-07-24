@@ -3,7 +3,7 @@ package datastructures.src.com.scaler.bitmanipulation;
 public class NumberOfOneBits {
 
 	public static void main(String[] args) {
-		int A = 11;
+		int A = 00000000000000000000000000001011;
 
 		System.out.println(solve(A));
 	}
@@ -19,13 +19,12 @@ public class NumberOfOneBits {
 //		return count;
 
 		int ones = 0;
-		
-		while(A!=0) {
+
+		while (A != 0) {
 			ones += (A & 1);
-			A = A>>>1;
+			A = A >>> 1;
 		}
-		
-		
+
 		return ones;
 
 	}

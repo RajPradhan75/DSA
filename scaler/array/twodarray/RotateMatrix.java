@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class RotateMatrix {
 
 	public static void main(String[] args) {
-		int[][] A = { { 1, 2 }, { 3, 4 } };
+		int[][] A = { { 1, 2 }, 
+				      { 3, 4 } };
 		System.out.println(Arrays.deepToString(solve(A)));
 
 	}
@@ -16,7 +17,7 @@ public class RotateMatrix {
 		int col = A[0].length;
 		
 		
-		for(int j = 0; j<col ; j++) {
+		for(int j = 0; j<col ; j++) {    				//transpose
 			for(int i = j+1 ; i< row ; i++) {
 				int temp = A[i][j];
 				A[i][j] = A[j][i];
@@ -25,7 +26,7 @@ public class RotateMatrix {
 		}
 		
 		
-		for(int i = 0; i<col ; i++) {
+		for(int i = 0; i<col ; i++) {						// reverse the row elements
 			int low = 0, high = row - 1;
 			
 			while(low <high) {

@@ -11,12 +11,8 @@ public class UnsetXBitsFromRight {
 
 	public static int solve(int A, int B) {
 
-
-
-	        A=A>>B;             //This will loose B bits at the right
-	        A=A<<B;             //This will add B 0's at the right
-	 
-		
+		A = A >> B; // This will loose B bits at the right
+		A = A << B; // This will add B 0's at the right
 
 		return A;
 
