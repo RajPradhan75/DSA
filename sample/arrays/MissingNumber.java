@@ -32,6 +32,7 @@ public class MissingNumber {
 			}
 			
 			return xor ^ i;
+			
 
 	}
 
