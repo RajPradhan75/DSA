@@ -40,13 +40,11 @@ public class SpiralMatrix2 {
 	            colEnd --;
 	            
 	            for (int i = colEnd; i >= colStart; i --) {
-//	                if (rowStart <= rowEnd)
 	                    matrix[rowEnd][i] = num ++; //change
 	            }
 	            rowEnd --;
 	            
 	            for (int i = rowEnd; i >= rowStart; i --) {
-//	                if (colStart <= colEnd)
 	                    matrix[i][colStart] = num ++; //change
 	            }
 	            colStart ++;
