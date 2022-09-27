@@ -7,7 +7,7 @@ public class TwoSum2 {
 	public static void main(String[] args) {
 		int[] A = { 2, 7, 11, 15 };
 		int target = 9;
-		System.out.println( Arrays.toString(solve(A, target)));
+		System.out.println(Arrays.toString(solve(A, target)));
 	}
 
 	private static int[] solve(int[] A, int target) {
@@ -31,7 +31,7 @@ public class TwoSum2 {
 			}
 
 		}
-		return new int[] {i+1, j+1};
+		return new int[] { i + 1, j + 1 };
 
 	}
 }
