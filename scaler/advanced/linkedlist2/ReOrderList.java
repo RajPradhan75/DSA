@@ -4,7 +4,6 @@ public class ReOrderList {
 	static ListNode head;
 
 	static class ListNode {
-
 		public int val;
 		public ListNode next;
 
