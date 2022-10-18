@@ -5,20 +5,22 @@ public class KthSymbol {
 	public static void main(String[] args) {
 
 		int A = 4, B = 3;
+//		int A = 2, B = 2;
 
 		System.out.println(solve(A, B));
 	}
 
-	public static int solve(int A, int B) {
+	public static int solve(int n, int k) {
 
-		if (A == 1)
+		if (n == 1 || k == 1)
 			return 0;
 
-		if (B % 2 == 0)
-			return (solve(A - 1, B / 2) == 0) ? 1 : 0;
-		else {
-			return (solve(A - 1, (B + 1) / 2) == 0) ? 0 : 1;
-		}
+		int mid = (int) Math.pow(2, n - 1) / 2;
+
+		if (k <= mid)
+			return solve(n - 1, k);
+		else
+			return 1 - solve(n - 1, k - mid);
 
 	}
 
