@@ -19,7 +19,7 @@ public class InvertBinaryTree {
 		tree.root.right.left = new TreeNode(6);
 		tree.root.right.right = new TreeNode(9);
 		System.out.println(solve(tree.root));
-	
+
 	}
 
 	private static TreeNode solve(TreeNode root) {
