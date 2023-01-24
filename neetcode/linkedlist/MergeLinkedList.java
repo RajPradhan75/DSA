@@ -14,7 +14,7 @@ public class MergeLinkedList {
 		int val;
 		Node next;
 
-		Node() {
+		public Node() {
 		};
 
 		Node(int val) {

@@ -19,16 +19,12 @@ public class TrappingRainWater {
 		while (left <= right) {
 
 			if (height[left] <= height[right]) {
-
 				if (height[left] > maxLeft)
 					maxLeft = height[left];
 				else
 					units += maxLeft - height[left];
 				left++;
-
-			}
-
-			else {
+			} else {
 				if (height[right] > maxRight)
 					maxRight = height[right];
 				else
@@ -36,9 +32,7 @@ public class TrappingRainWater {
 				right--;
 			}
 		}
-
 		return units;
-
 	}
 
 }
