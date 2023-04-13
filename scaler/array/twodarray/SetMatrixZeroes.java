@@ -29,7 +29,7 @@ public class SetMatrixZeroes {
 			}
 		}
 
-		for (int j = 0; j < col; j++) { // check first col
+		for (int j = 0; j < col; j++) { // check first row
 			if (matrix[0][j] == 0) {
 				isZeroesRow = true;
 				break;

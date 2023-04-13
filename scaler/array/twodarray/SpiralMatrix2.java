@@ -33,7 +33,7 @@ public class SpiralMatrix2 {
 	                matrix[rowStart][i] = num ++; //change
 	            }
 	            rowStart ++;
-	            
+	             
 	            for (int i = rowStart; i <= rowEnd; i ++) {
 	                matrix[i][colEnd] = num ++; //change
 	            }

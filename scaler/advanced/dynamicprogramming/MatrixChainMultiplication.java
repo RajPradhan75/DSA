@@ -27,8 +27,7 @@ public class MatrixChainMultiplication {
 //Here i = 1, and j = 1. So, there's only one matrix in the array and no other matrix to which this matrix can be multiplied. So, there will be no multiplication, hence the cost of multiplication becomes zero
 
 		for (int k = i; k <= j - 1; k++) {
-			int tempAns = solve(A, i, k) + solve(A, k + 1, j)
-			     +A[i-1] * A[k] * A[j];
+			int tempAns = solve(A, i, k) + solve(A, k + 1, j) + A[i - 1] * A[k] * A[j];
 
 			if (tempAns < min) {
 				min = tempAns;

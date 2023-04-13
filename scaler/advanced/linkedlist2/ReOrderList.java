@@ -45,7 +45,8 @@ public class ReOrderList {
 			slow = slow.next;
 			fast = fast.next.next;
 		}
-		// Reverse second half of LinkedList
+
+//		Reverse second half of LinkedList
 		ListNode second = slow.next;
 		ListNode prev = slow.next = null;
 		while (second != null) {
@@ -54,6 +55,7 @@ public class ReOrderList {
 			prev = second;
 			second = tmp;
 		}
+
 		// Reorder the list
 		ListNode first = head;
 		second = prev;

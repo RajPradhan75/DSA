@@ -10,7 +10,8 @@ public class MergeSortedArrays {
 		int m = 3;
 		int n = 3;
 
-		System.out.println("Before: " + Arrays.toString(nums1));
+		System.out.println("Before nums1: " + Arrays.toString(nums1));
+		System.out.println("Before nums2: " + Arrays.toString(nums2));
 		merge(nums1, m, nums2, n);
 		System.out.println("After: " + Arrays.toString(nums1));
 
