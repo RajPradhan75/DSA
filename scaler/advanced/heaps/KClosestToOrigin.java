@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 
-
 public class KClosestToOrigin {
     public static void main(String[] args) {
 
-        int[][] points = {{1, 3},
-                {-2, 2}};
+//        int[][] points = {{1, 3},
+//                {-2, 2}};
+        int[][] points = {{2, 2}, {2, 2}, {2, 2}, {2, 2}, {2, 2}, {2, 2}, {1, 1}};
         int k = 1;
         System.out.println(Arrays.deepToString(findKClosest(points, k)));
     }
@@ -20,11 +20,11 @@ public class KClosestToOrigin {
 
         for (int[] point : points) {
             heaps.offer(point);
+            if (heaps.size() > k) {
+                heaps.poll();
+            }
         }
 
-        if (heaps.size() > k) {
-            heaps.poll();
-        }
 
         int[][] result = new int[k][2];
         int i = 0;
