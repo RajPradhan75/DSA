@@ -10,7 +10,7 @@ public class findMissingNumber {
     public static int getMissingNo(int[] arr, int n) {
             int xor = 0;
 
-            for(int i = 0; i<=n+1;i++){
+            for(int i = 1; i<=n+1;i++){
                 xor ^= i;
             }
 

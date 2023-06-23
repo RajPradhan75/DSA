@@ -9,11 +9,9 @@ public class StringToInteger {
     }
 
     public static int convertToInt(String str) {
-
         int result = 0;
         int sign = 1;
         int i = 0;
-
 
         if (str.charAt(0) == '-') {
             sign = -1;
@@ -27,15 +25,9 @@ public class StringToInteger {
             if (digit < 0 || digit > 9) {
                 throw new NumberFormatException("Invalid Input: " + str);
             }
-
             result = result * 10 + digit;
-
             i++;
-
         }
-
         return sign * result;
     }
-
-
 }

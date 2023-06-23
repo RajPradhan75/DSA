@@ -33,7 +33,6 @@ public class SubArraySum {
                 return subarray;
             }
 
-
             if (currentSum < targetSum) {
                 end++;
                 currentSum += arr[end];

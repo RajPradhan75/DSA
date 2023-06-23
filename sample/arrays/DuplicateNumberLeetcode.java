@@ -3,7 +3,7 @@ package datastructures.src.com.sample.arrays;
 public class DuplicateNumberLeetcode {
 
 	public static void main(String[] args) {
-		int nums[] = { 4, 3, 1, 2, 1, 3, 5 };
+		int nums[] = { 4, 3, 2, 1, 3, 5 };
 		int duplicateNum = findDuplicateNumber(nums);
 		System.out.println(duplicateNum);
 	}

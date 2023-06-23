@@ -41,7 +41,7 @@ public class ContainsDuplicate {
 //
 //		return check;
 
-		Set<Integer> set = new HashSet<Integer>();
+		Set<Integer> set = new HashSet<>();
 
 		for (int num : nums) {
 			if (set.contains(num))

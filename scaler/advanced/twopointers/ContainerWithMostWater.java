@@ -4,7 +4,7 @@ public class ContainerWithMostWater {
 
 	public static void main(String[] args) {
 
-		int[] A = { 1, 5, 4, 3 }; // o/p : 6
+		int[] A = {1,8,6,2,5,4,8,3,7}; // o/p : 6
 		System.out.println(solve(A));
 	}
 
@@ -22,10 +22,7 @@ public class ContainerWithMostWater {
 				left++;
 			else
 				right--;
-
 		}
 		return res;
-
 	}
-
 }
