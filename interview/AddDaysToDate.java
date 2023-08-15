@@ -41,7 +41,6 @@ public class AddDaysToDate {
                 daysInMonth[2] = isLeapYear ? 29 : 28;
             }
         }
-
         return new int[]{day, month, year};
     }
 
