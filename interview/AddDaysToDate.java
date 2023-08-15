@@ -20,44 +20,6 @@ public class AddDaysToDate {
                 (year % 400 == 0);
     }
 
-/*    private static String addDaysToDate(int day, int month, int year, int daysToAdd) {
-
-
-        int[] daysInMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-        if (isLeapYear(year)) {
-            daysInMonth[2] = 29;
-        }
-
-
-        while (daysToAdd > 0) {
-            int daysInCurrentMonth = daysInMonth[month];
-
-            if (day + daysToAdd <= daysInCurrentMonth) {
-                day += daysToAdd;
-                daysToAdd = 0;
-            } else {
-                daysToAdd -= daysInCurrentMonth - day + 1;
-                day = 1;
-                month++;
-
-                if (month > 12) {
-                    month = 1;
-                    year++;
-                    if (isLeapYear(year)) {
-                        daysInMonth[2] = 29;
-                    } else {
-                        daysInMonth[2] = 28;
-                    }
-                }
-            }
-        }
-
-
-        return String.format("%02d-%02d-%04d", day, month, year);
-    }*/
-
-
-
     public static int[] addDaysToDate(int day, int month, int year, int daysToAdd) {
         int[] daysInMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // Days in each month
 
