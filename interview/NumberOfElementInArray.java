@@ -20,8 +20,7 @@ public class NumberOfElementInArray {
             occurrence.put(num, occurrence.getOrDefault(num, 0) + 1);
         }
 
-        List<Map.Entry<Integer, Integer>> entryList =
-                new ArrayList<>(occurrence.entrySet());
+        List<Map.Entry<Integer, Integer>> entryList = new ArrayList<>(occurrence.entrySet());
         entryList.sort((e1, e2) -> e2.getValue().compareTo(e1.getValue()));
 
         for (Map.Entry<Integer, Integer> entry : entryList) {
