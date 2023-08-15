@@ -11,8 +11,8 @@ public class AddDaysToDate {
 //
 //        System.out.println(addDaysToDate(day, month, year, daysToadd));
 
-        int[] result2 = addDaysToDate(1, 1, 2022, 70);
-        System.out.println(" Output Date: " + formatDate(result2));
+        int[] result = addDaysToDate(1, 1, 2022, 70);
+        System.out.println(" Output Date: " + formatDate(result));
     }
 
     private static boolean isLeapYear(int year) {
@@ -24,10 +24,10 @@ public class AddDaysToDate {
         int[] daysInMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; // Days in each month
 
         // Leap year check
-        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-        if (isLeapYear) {
-            daysInMonth[2] = 29; // February has 29 days in a leap year
-        }
+//        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+//        if (isLeapYear) {
+//            daysInMonth[2] = 29; // February has 29 days in a leap year
+//        }
 
         // Calculate new date
         day += daysToAdd;
@@ -37,8 +37,11 @@ public class AddDaysToDate {
             if (month > 12) {
                 month = 1;
                 year++;
-                isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-                daysInMonth[2] = isLeapYear ? 29 : 28;
+                // Leap year check
+                boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+                if (isLeapYear) {
+                    daysInMonth[2] = 29; // February has 29 days in a leap year
+                }
             }
         }
         return new int[]{day, month, year};
