@@ -19,7 +19,7 @@ public class LargestContinuosSubsequenceWithZeroSum {
 		for (int i = 1; i < len; i++)
 			pf[i] = pf[i - 1] + A[i];
 
-		// storing the prefix array to hasmap.
+		// storing the prefix array to hashmap.
 		HashMap<Integer, Integer> hm = new HashMap<>();
 		hm.put(0, -1);// initialize hm with 0 and -1 -> Base case.
 		int l = -1; // to store the start index of the final answer.
