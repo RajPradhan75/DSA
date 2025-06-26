@@ -71,9 +71,9 @@ public class ReverseLinkedList {
         list.next.next.next = new ListNode(4);
         list.next.next.next.next = new ListNode(5);
 
-
+        System.out.println("Reversed using Iterative:");
         display(list);
-
+        System.out.println();
         // Rebuild list again because it was mutated by previous reversal
         list = new ListNode(1);
         list.next = new ListNode(2);
