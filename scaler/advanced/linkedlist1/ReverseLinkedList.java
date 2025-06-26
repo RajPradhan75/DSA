@@ -38,7 +38,6 @@ public class ReverseLinkedList {
         list.next.next.next = new ListNode(4);
         list.next.next.next.next = new ListNode(5);
 
-        reverseList(list);
 
         display(list);
 
