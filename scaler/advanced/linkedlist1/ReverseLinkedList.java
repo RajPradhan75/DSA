@@ -18,6 +18,23 @@ public class ReverseLinkedList {
         return prev;
     }
 
+    // Recursive reverse
+    public static ListNode reverseListRecursive(ListNode head) {
+        // Base case: if head is null or only one node, it's already reversed
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        // Reverse the rest list
+        ListNode newHead = reverseListRecursive(head.next);
+
+        // Make the next node point to current node
+        head.next.next = head;
+        head.next = null;
+
+        return newHead;
+    }
+
 
     public static void display(ListNode linkedList) {
         ListNode reversedList = reverseList(linkedList); // Reverse the linked list
@@ -27,7 +44,23 @@ public class ReverseLinkedList {
             System.out.print(temp.val + " ");
             temp = temp.next;
         }
-        System.out.println(); // Add a new line after printing the linked list
+    }
+
+    // Display using recursive reverse
+    public static void display(ListNode linkedList, boolean useRecursive) {
+        ListNode reversedList;
+        if (useRecursive) {
+            reversedList = reverseListRecursive(linkedList);
+        } else {
+            reversedList = reverseList(linkedList);
+        }
+
+        ListNode temp = reversedList;
+        while (temp != null) {
+            System.out.print(temp.val + " ");
+            temp = temp.next;
+        }
+        System.out.println();
     }
 
 
@@ -40,6 +73,16 @@ public class ReverseLinkedList {
 
 
         display(list);
+
+        // Rebuild list again because it was mutated by previous reversal
+        list = new ListNode(1);
+        list.next = new ListNode(2);
+        list.next.next = new ListNode(3);
+        list.next.next.next = new ListNode(4);
+        list.next.next.next.next = new ListNode(5);
+
+        System.out.println("Reversed using Recursive:");
+        display(list, true); // Use recursive
 
     }
 
