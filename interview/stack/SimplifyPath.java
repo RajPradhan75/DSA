@@ -1,12 +1,33 @@
 package datastructures.src.com.interview.stack;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.*;
 
 public class SimplifyPath {
 
 
     private static String simplifyPath(String path) {
+
+
+/*       List<String> list = new ArrayList<>(Arrays.asList(path.split("/")));
+
+         list.removeIf(s -> s.isEmpty() || s.equals("."));
+
+         int i = 0;
+
+         while(i < list.size()){
+             if(list.get(i).equals("..")){
+                 if(i > 0){
+                     list.remove(i);
+                     list.remove(i - 1);
+                     i--;
+                 }else{
+                     list.remove(i);
+                 }
+             }else{
+                 i++;
+             }
+         }
+         return "/" + String.join("/",list);*/
 
         Deque<String> stack = new ArrayDeque<>();
 
